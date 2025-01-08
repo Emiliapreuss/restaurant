@@ -1,0 +1,60 @@
+# Ignore Visual Studio temporary files, build results, and
+# user-specific files.
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ASP.NET Core Specific
+# Files in the 'wwwroot/lib' folder managed by LibMan or other package managers
+wwwroot/lib/
+
+# Node.js dependencies (for frontend libraries like React, Angular, etc.)
+node_modules/
+
+# Logs
+*.log
+
+# Build results
+bin/
+obj/
+out/
+
+# Temporary and cache files
+*.temp
+*.tmp
+*.cache
+*.sqlite
+*.sqlite-journal
+*.tlog
+*.pdb
+
+# Deployment files
+*.publish/
+*.deploy/
+
+# Package management
+*.nupkg
+*.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Resharper files
+_ReSharper.Caches/
+
+# Rider IDE files
+.idea/
+
+# Other
+.DS_Store       # MacOS Finder metadata
+Thumbs.db       # Windows thumbnail cache
+
+# Files from docker-compose
+docker-compose.override.yml
+
+# Local Tooling
+.env
+.env.*

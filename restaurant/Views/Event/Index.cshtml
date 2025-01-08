@@ -1,0 +1,42 @@
+﻿@model List<restaurant.Models.Event>
+
+<div class="container py-4">
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <h2 class="text-primary">Upcoming Events</h2>
+            <p class="text-muted">Here are the events coming up soon. Click to view more details.</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Menu</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var ev in Model)
+                        {
+                            <tr>
+                                <td>@ev.Name</td>
+                                <td>@ev.EventDate.ToString("dd MMM yyyy hh:mm tt")</td>
+                                <td>@ev.Menu.Name</td>
+                                <td>
+                                    <a asp-action="Details" asp-route-id="@ev.Id" class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-eye"></i> View
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
