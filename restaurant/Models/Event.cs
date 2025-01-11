@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 
 namespace restaurant.Models
 {
@@ -10,7 +11,9 @@ namespace restaurant.Models
         public string Description { get; set; }
         public DateTime EventDate { get; set; }
 
-        public int MenuId { get; set; } 
+        public int MenuId { get; set; }
+
+        [ValidateNever]
         public Menu Menu { get; set; } 
 
     }
